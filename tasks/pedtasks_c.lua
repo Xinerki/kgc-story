@@ -1,6 +1,5 @@
 
 
-
 pedTasksT = {}
 
 function pedTasksT.update()
@@ -32,5 +31,35 @@ end
 
 end -- story.pedTasks.walkingTo
 
+if getElementData(v,"story.pedTasks.aimingAt") == true then
+
+givePedWeapon(v,29,9999,true)
+
+pedTasksT.aimX=getElementData(v,"story.pedTasks.aimingAt.x")
+pedTasksT.aimY=getElementData(v,"story.pedTasks.aimingAt.y")
+pedTasksT.aimZ=getElementData(v,"story.pedTasks.aimingAt.z")
+setPedAimTarget(v,pedTasksT.aimX,pedTasksT.aimY,pedTasksT.aimZ)
+pedTasksT.pedX, pedTasksT.pedY,pedTasksT.pedX, pedTasksT.pedZ=getElementPosition(v)
+
+setPedControlState(v,"aim_weapon",true)
+pedTasksT.rot=findRotation(pedTasksT.pedX, pedTasksT.pedY, pedTasksT.aimX,pedTasksT.aimY)
+setPedCameraRotation( v, -pedTasksT.rot )
+
+end -- story.pedTasks.aimingAt
+
 end -- for
 end -- function
+
+function pedTasksT.clearPedAimedAt_cl(ped)
+setPedControlState(ped,"aim_weapon",false)
+end
+
+function pedTasksT.givePedWeapon_s(thePed,weapon,ammo,setAsCurrent)
+givePedWeapon(thePed,weapon,ammo,setAsCurrent)
+end
+
+addEvent("story.pedTasks.clearPedAimedAt",true)
+addEventHandler("story.pedTasks.clearPedAimedAt",root,pedTasksT.clearPedAimedAt_cl)
+
+addEvent("story.pedTasks.givePedWeapon",true)
+addEventHandler("story.pedTasks.givePedWeapon", root, pedTasksT.givePedWeapon_s)

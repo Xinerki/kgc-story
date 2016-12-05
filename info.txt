@@ -3,7 +3,8 @@ TODO:
 [ ] Help Messages
 [ ] Subtitles
 [ ] First mission (Introduction)
-[ ] A.I.
+[x] Ped tasks
+[x] A.I.
 
 Dimension definitions:
 0: Freeroam dimension
