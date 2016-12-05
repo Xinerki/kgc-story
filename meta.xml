@@ -12,4 +12,9 @@
 	<script type="client" src="tasks\ai_c.lua" />
 	<script type="server" src="tasks\ai_s.lua" />
 
+	<script type="client" src="hud\subtitles_c.lua" />
+	<script type="server" src="hud\subtitles_s.lua" />
+
+	<script type="server" src="missions\mission1.lua">
+
 </meta>

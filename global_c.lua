@@ -8,6 +8,7 @@ function onRender()
 missionNameT.renderMissionName()
 pedTasksT.update()
 aiT.update()
+subtitlesT.render()
 end
 
 addEventHandler("onClientRender",root,onRender)
