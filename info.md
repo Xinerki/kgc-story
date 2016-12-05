@@ -7,5 +7,5 @@ TODO:
 - [x] A.I.
 
 Dimension definitions:
-0: Freeroam dimension
->1: Mission dimensions (based upon mission/heist/activity IDs)
+>0: Freeroam dimension
+>1: Mission 1
