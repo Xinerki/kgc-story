@@ -2,10 +2,12 @@ TODO:
 - [x] Mission Names
 - [ ] Help Messages
 - [ ] Subtitles
-- [ ] First mission (Introduction)
+- [x] First mission (Introduction)
+- [ ] A 2-Player mission (requiring a 2nd player to join)
 - [x] Ped tasks
 - [x] A.I.
 
 Dimension definitions:
->0: Freeroam dimension
->1: Mission 1
+>0: Freeroam
+>1: Free For All (tba)
+>Random - From 10 to 50: Missions

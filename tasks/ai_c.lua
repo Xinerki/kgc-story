@@ -8,10 +8,10 @@ if getElementData(v,"story.ai.enemyPed") == true then
 aiT.enemy=getElementData(v,"story.ai.enemyPed.target")
 --if type(enemy) == "table" then enemy=enemy[math.random(0,#enemy)] end
 
-aiT.seed=getElementData(v,"story.ai.enemyPed.seed")
+aiT.weapon=getElementData(v,"story.ai.enemyPed.weapon")
 --math.randomseed(0)
 
-givePedWeapon(v,29,1,true)
+givePedWeapon(v,aiT.weapon,1,true)
 
 aiT.pedX,aiT.pedY,aiT.pedZ=getElementPosition(v)
 
