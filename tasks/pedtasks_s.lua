@@ -38,10 +38,10 @@ end
 
 function pedTasksT.debug()
 pedTasksT.debugPed = createPed( 0, 0,10,3 )
-pedTasksT.makePedWalkTo(pedTasksT.debugPed,-5,23,3,2)
+pedTasksT.makePedWalkTo(pedTasksT.debugPed,-5,23,3,1)
 end
 
-addCommandHandler( "debug", pedTasksT.debug )
+--addCommandHandler( "debug", pedTasksT.debug )
 
 addEvent("story.pedTasks.clearPedWalkTo",true)
 addEventHandler("story.pedTasks.clearPedWalkTo",root,pedTasksT.clearPedWalkTo)
