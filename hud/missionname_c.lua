@@ -10,12 +10,6 @@ missionNameT.missionNameOn = false
 missionNameT.outline=3
 missionNameT.scale=2.5
 
-function missionNameT.onRender()
-
-missionNameT.renderMissionName()
-
-end
-
 function missionNameT.debugMissionName(cmd,text)
 missionNameT.setMissionName_cl("A New Life")
 end
@@ -69,7 +63,6 @@ end
 
 end
 
-addEventHandler("onClientRender",root,missionNameT.onRender)
 --addCommandHandler( "mission", debugMissionName )
 
 addEvent("story.missionName.triggerRendering",true)
