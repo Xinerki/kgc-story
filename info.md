@@ -1,10 +1,10 @@
 TODO:
-[x] Mission Names
-[ ] Help Messages
-[ ] Subtitles
-[ ] First mission (Introduction)
-[x] Ped tasks
-[x] A.I.
+- [x] Mission Names
+- [ ] Help Messages
+- [ ] Subtitles
+- [ ] First mission (Introduction)
+- [x] Ped tasks
+- [x] A.I.
 
 Dimension definitions:
 0: Freeroam dimension
