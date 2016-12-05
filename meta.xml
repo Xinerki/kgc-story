@@ -1,6 +1,7 @@
 <meta>
 	<info type="script" name="A storyline." author="Xinerki" description="For MTA:SA" version="1.0.0" />
 	
-	<script type="client" src="hud\missionname.lua" />
-	<script type="server" src="hud\server.lua" />
+	<script type="client" src="hud\missionname_c.lua" />
+	<script type="server" src="hud\missionname_s.lua" />
+	
 </meta>
