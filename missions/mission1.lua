@@ -67,7 +67,7 @@ setElementRotation(player,0,0,90)
 toggleAllControls(player,true,true,false)
 mission1.car=createVehicle(getVehicleModelFromName("Buffalo"),1363,-1658,14,0,0,-90,"X1N3RK1")
 mission1.vagos=createPed(110,2151,-982,63,123.5)
-aiT.setPedAsEnemyTo(mission1.vagos,player,30)
+aiT.setPedAsEnemyTo(mission1.vagos,player,22)
 mission1.vagoscar=createVehicle(getVehicleModelFromName("Hermes"),2144,-987,62,0,0,190)
 setElementDimension(mission1.vagos,dimension)
 setElementDimension(mission1.vagoscar,dimension)
@@ -78,7 +78,7 @@ end
 
 function mission1.gameplay1_2(player,dimension,car,vagos,vagoscar)
 subtitlesT.setSubtitle(player,"Kill the Vagos Member.",5000)
-mission1.vagosMarker=createMarker(0,0,0,"arrow",0.5,255,0,0,255/2)
+mission1.vagosMarker=createMarker(0,0,0,"arrow",1,255,0,0,255/2)
 attachElements(mission1.vagosMarker,vagos,0,0,1.5)
 mission1.vagosBlip=createBlipAttachedTo(vagos)
 addEventHandler("onPedWasted",vagos,mission1.gameplay1_3)
@@ -89,19 +89,17 @@ mission1.tempxin=xin
 end
 
 function mission1.gameplay1_3(ammo, killer)
-if killer == mission1.tempplayer then
-setElementDimension(killer,0)
-subtitlesT.setSubtitle(killer,"MISSION PASSED\n250$",5000)
-givePlayerMoney(killer,250)
-destroyElement(source)
+setElementDimension(mission1.tempplayer,0)
+subtitlesT.setSubtitle(mission1.tempplayer,"MISSION PASSED\n250$",5000)
+playSound(mission1.tempplayer,"files/kill/big.wav",false,true)
+givePlayerMoney(mission1.tempplayer,250)
+removeEventHandler("onPedWasted",source,mission1.gameplay1_3)
+setElementData(Mission1Marker,"story.isMissionMarkerUsed",false)
+setElementData(Mission1Marker,"story.missionMarkerUsedBy",nil)
 destroyElement(mission1.vagos)
 destroyElement(mission1.vagoscar)
 destroyElement(mission1.car)
 destroyElement(mission1.vagosBlip)
 destroyElement(mission1.vagosMarker)
-removeEventHandler("onPedWasted",vagos,mission1.gameplay1_3)
-else
-mission1.cutscene1_7(mission1.tempplayer,mission1.tempdimension,mission1.tempxi)
-end
 end
 

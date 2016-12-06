@@ -9,6 +9,14 @@ missionNameT.renderMissionName()
 pedTasksT.update()
 aiT.update()
 subtitlesT.render()
+missions.renderMissionMarkers()
 end
 
 addEventHandler("onClientRender",root,onRender)
+
+function playSound_s(path, loop, throttled)
+playSound(path,loop,throttled)
+end
+
+addEvent("story.global.triggerPlaySound",true)
+addEventHandler("story.global.triggerPlaySound",root,playSound_s)

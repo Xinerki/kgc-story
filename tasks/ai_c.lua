@@ -15,34 +15,38 @@ givePedWeapon(v,aiT.weapon,1,true)
 
 aiT.pedX,aiT.pedY,aiT.pedZ=getElementPosition(v)
 
-aiT.aimX, aiT.aimY, aiT.aimZ = getPedBonePosition(aiT.enemy,3)
+--aiT.aimX, aiT.aimY, aiT.aimZ = getPedBonePosition(aiT.enemy,3)
+aiT.aimX, aiT.aimY, aiT.aimZ = getElementPosition(aiT.enemy)
 
 if getDistanceBetweenPoints2D( aiT.pedX,aiT.pedY, aiT.aimX, aiT.aimY ) < 25 then
 
 setPedControlState(v,"aim_weapon",true)
 
-if getPedControlState( v, "aim_weapon" ) then setPedAimTarget(v,aiT.aimX, aiT.aimY, aiT.aimZ) end
+--if getPedControlState( v, "aim_weapon" ) then setPedAimTarget(v,aiT.aimX, aiT.aimY, aiT.aimZ) end
+setPedAimTarget(v,aiT.aimX, aiT.aimY, aiT.aimZ)
 
-if math.random(0,10) == 5 then
+if math.random(0,2) == 1 then
 setPedControlState(v,"fire",true)
-setPedControlState(v,"forwards",true)
-setPedControlState(v,"aim_weapon",true)
+--setPedControlState(v,"aim_weapon",true)
 else
 setPedControlState(v,"fire",false)
-setPedControlState(v,"forwards",false)
-setPedControlState(v,"aim_weapon",false)
+--setPedControlState(v,"aim_weapon",false)
 end
 
 
-if math.random(0,10) == 5 then
+if math.random(0,2) == 1 then
 aiT.goLeft(v)
 end
 
 
-if math.random(0,10) == 5 then
+if math.random(0,2) == 1 then
 aiT.goRight(v)
 end
 
+
+else
+setPedControlState(v,"fire",false)
+setPedControlState(v,"aim_weapon",false)
 end -- if disntace
 end -- story.ai.enemyPed
 end -- for
@@ -50,10 +54,10 @@ end -- function
 
 function aiT.goLeft(ped)
 setPedControlState(ped,"left",true)
-setTimer(setPedControlState,2000,1,ped,"left",false)
+setTimer(setPedControlState,3000,1,ped,"left",false)
 end
 
 function aiT.goRight(ped)
 setPedControlState(ped,"right",true)
-setTimer(setPedControlState,2000,1,ped,"right",false)
+setTimer(setPedControlState,3000,1,ped,"right",false)
 end
