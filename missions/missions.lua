@@ -20,10 +20,10 @@ addEventHandler("onMarkerHit",Mission1Marker,onHitMission1Marker)
 function gangWave(player)
 x,y,z=getElementPosition(player)
 for i=1,5 do
-    ped=createPed(0,x+(math.random(-10,10)),y+(math.random(-10,10)),z)
-    aiT.setPedAsEnemyTo(ped,player,29)
+    ped=createPed(math.random(0,300),x+(math.random(-10,10)),y+(math.random(-10,10)),z)
+    aiT.setPedAsEnemyTo(ped,getElementsByType("player"),math.random(22,32))
     --createPed( int modelid, float x, float y, float z [, float rot = 0.0, bool synced = true ] )
 end
 end
 
---addCommandHandler("survival",gangWave)
+addCommandHandler("survival",gangWave)
