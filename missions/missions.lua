@@ -1,5 +1,5 @@
 
-Mission1Marker=createMarker( 1349, -1670, 12.5, "cylinder", 1.5, 170,82,255,255/2 )
+Mission1Marker=createMarker( 1349, -1670, 12.5, "cylinder", 1.5, 255,50,50,255/2 )
 Mission1Blip=createBlipAttachedTo( Mission1Marker, 37 )
 setElementData(Mission1Marker,"story.isMissionMarker",true)
 setElementData(Mission1Marker,"story.missionMarkerName","A New Life")
@@ -16,6 +16,14 @@ end
 end
 
 addEventHandler("onMarkerHit",Mission1Marker,onHitMission1Marker)
+
+Mission2Marker=createMarker(-1936, 274, 40, "cylinder", 1.5, 0,100,255,255/2)
+Mission2Blip=createBlipAttachedTo(Mission2Marker, 55)
+setElementData(Mission2Marker,"story.isMissionMarker",true)
+setElementData(Mission2Marker,"story.missionMarkerName","Educational Theft")
+setElementData(Mission2Marker,"story.isMissionMarkerUsed",false)
+setElementData(Mission2Marker,"story.isMissionMarker1P",false)
+setElementData(Mission2Marker,"story.isMissionMarker2P",true)
 
 function gangWave(player)
 x,y,z=getElementPosition(player)

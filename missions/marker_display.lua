@@ -35,6 +35,20 @@ dxDrawText(getElementData(v,"story.missionMarkerName").."\n1 Player".."\nAvailab
 dxDrawText(getElementData(v,"story.missionMarkerName").."\n1 Player".."\nAvailable to play.",x,y,0,0,tocolor(r,g,b,255),scale,"default-bold","center")
 end
 end
+if getElementData(v, "story.isMissionMarker2P") then
+
+dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x+outline,y-outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x-outline,y+outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x+outline,y+outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x-outline,y-outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+
+--dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x+outline,y,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+--dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x-outline,y,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+--dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x,y+outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+--dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x,y-outline,0,0,tocolor(0,0,0,255),scale,"default-bold","center")
+
+dxDrawText(getElementData(v,"story.missionMarkerName").."\n2 Players".."\nAvailable to play.",x,y,0,0,tocolor(r,g,b,255),scale,"default-bold","center")
+end
 end
 --dxDrawText( string text, float left, float top [, float right=left, float bottom=top, int color=white,                   float scale=1, mixed font="default", string alignX="left", string alignY="top",                  bool clip=false, bool wordBreak=false, bool postGUI=false,                  bool colorCoded=false, bool subPixelPositioning=false,                   float fRotation=0, float fRotationCenterX=0, float fRotationCenterY=0 ] )
 
