@@ -73,7 +73,7 @@ setTimer(mission2.cutscene1_6, 2100, 1)
 end
 
 function mission2.cutscene1_6()
-subtitlesT.setSubtitle(mission2players, "Kyle: It's a red sports car, luxury stuff.", 3000)
+subtitlesT.setSubtitle(mission2players, "Kyle: It's a sports car, luxury stuff.", 3000)
 setTimer(mission2.cutscene1_7, 3100, 1)
 end
 
@@ -281,8 +281,7 @@ setElementData(Mission2Marker,"story.player1",false)
 setElementData(Mission2Marker,"story.player2",false)
 playSound(mission2.player1,"files/job/big.wav",false,true)
 playSound(mission2.player2,"files/job/big.wav",false,true)
-subtitlesT.setSubtitle(mission2.player1,"MISSION PASSED\n$"..tostring(damage),5000)
-subtitlesT.setSubtitle(mission2.player2,"MISSION PASSED\n$"..tostring(damage),5000)
+subtitlesT.setSubtitle(mission2players,"MISSION PASSED\n$"..tostring(damage),5000)
 givePlayerMoney(mission2.player1,damage)
 givePlayerMoney(mission2.player2,damage)
 removeEventHandler("onVehicleExplode",mission2.coquette,mission2.failmission_BLOWUPCOQUETTE)
@@ -294,8 +293,7 @@ end
 end
 
 function mission2.failmission_BLOWUPCOQUETTE()
-subtitlesT.setSubtitle(mission2.player1,"MISSION FAILED\nThe target vehicle was destroyed.",5000,255,50,50,255)
-subtitlesT.setSubtitle(mission2.player2,"MISSION FAILED\nThe target vehicle was destroyed.",5000,255,50,50,255)
+subtitlesT.setSubtitle(mission2players,"MISSION FAILED\nThe target vehicle was destroyed.",5000,255,50,50,255)
 destroyElement(mission2.coquette)
 destroyElement(mission2.player1car)
 destroyElement(mission2.player2car)
@@ -325,8 +323,7 @@ removeEventHandler("onPlayerQuit",mission2.player2,mission2.failmission_PLAYER2L
 end
 
 function mission2.failmission_BLOWUPVEHICLE()
-subtitlesT.setSubtitle(mission2.player1,"MISSION FAILED\nThe vehicle was destroyed.",5000,255,50,50,255)
-subtitlesT.setSubtitle(mission2.player2,"MISSION FAILED\nThe vehicle was destroyed.",5000,255,50,50,255)
+subtitlesT.setSubtitle(mission2players,"MISSION FAILED\nThe vehicle was destroyed.",5000,255,50,50,255)
 destroyElement(mission2.coquette)
 destroyElement(mission2.player1car)
 destroyElement(mission2.player2car)
@@ -356,8 +353,7 @@ removeEventHandler("onPlayerQuit",mission2.player2,mission2.failmission_PLAYER2L
 end
 
 function mission2.failmission_BLOWUPPACKER()
-subtitlesT.setSubtitle(mission2.player1,"MISSION FAILED\nThe packer was destroyed.",5000,255,50,50,255)
-subtitlesT.setSubtitle(mission2.player2,"MISSION FAILED\nThe packer was destroyed.",5000,255,50,50,255)
+subtitlesT.setSubtitle(mission2players,"MISSION FAILED\nThe packer was destroyed.",5000,255,50,50,255)
 destroyElement(mission2.coquette)
 destroyElement(mission2.player1car)
 destroyElement(mission2.player2car)
