@@ -50,7 +50,7 @@ end
 if missionNameT.missionNameFade<2 then missionNameT.clearMissionName_cl() end
 
 if missionNameT.missionNameOn and missionNameT.missionName then
-missionNameT.missionname_x=w/2+w/4
+missionNameT.missionname_x=w/2
 missionNameT.missionname_y=h-h/4
 
 dxDrawText(missionNameT.missionName,missionNameT.missionname_x+missionNameT.outline,missionNameT.missionname_y+missionNameT.outline,0,0,tocolor(0,0,0,missionNameT.missionNameFade),missionNameT.scale,"pricedown","left")

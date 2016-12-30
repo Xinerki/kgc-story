@@ -24,6 +24,35 @@ setElementData(Mission2Marker,"story.missionMarkerName","Educational Theft")
 setElementData(Mission2Marker,"story.isMissionMarkerUsed",false)
 setElementData(Mission2Marker,"story.isMissionMarker1P",false)
 setElementData(Mission2Marker,"story.isMissionMarker2P",true)
+setElementData(Mission2Marker,"story.isPlayer1inMission",false)
+setElementData(Mission2Marker,"story.isPlayer2inMission",false)
+setElementData(Mission2Marker,"story.player1",false)
+setElementData(Mission2Marker,"story.player2",false)
+
+function onHitMission2Marker(hitElement, hitDimension)
+if getElementType( hitElement ) == 'player' 
+and hitDimension == true 
+and getElementData(Mission2Marker,"story.isPlayer1inMission") == false 
+then
+
+mission2.waitForPlayer2(hitElement)
+setElementData(Mission2Marker,"story.isPlayer1inMission",true)
+setElementData(Mission2Marker,"story.player1",hitElement)
+
+elseif getElementType( hitElement ) == 'player' and hitDimension == true 
+and getElementData(Mission2Marker,"story.isPlayer1inMission") == true 
+and getElementData(Mission2Marker,"story.isPlayer2inMission") == false 
+and hitElement ~= getElementData(Mission2Marker,"story.player1")
+then
+
+mission2.startMission(hitElement)
+setElementData(Mission2Marker,"story.isPlayer2inMission",true)
+setElementData(Mission2Marker,"story.player2",hitElement)
+
+end
+end
+
+addEventHandler("onMarkerHit",Mission2Marker,onHitMission2Marker)
 
 function gangWave(player)
 x,y,z=getElementPosition(player)

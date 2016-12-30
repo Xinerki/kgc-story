@@ -22,7 +22,7 @@ if pedTasksT.walkSpeed == 0 then setPedControlState( v, "walk", true ) end
 if pedTasksT.walkSpeed == 2 then setPedControlState( v, "sprint", true ) end
 pedTasksT.dist=getDistanceBetweenPoints2D( pedTasksT.pedX, pedTasksT.pedY, pedTasksT.walkX, pedTasksT.walkY )
 
-if pedTasksT.dist <= 1 then
+if pedTasksT.dist <= 2 then
 setPedControlState(v, "forwards", false)
 setPedControlState(v, "walk", false)
 setPedControlState(v, "sprint", false)

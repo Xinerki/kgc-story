@@ -10,4 +10,5 @@ TODO:
 Dimension definitions:
 >0: Freeroam
 >1: Free For All (tba)
->Random - From 10 to 50: Missions
+>From 10 to 50: Mission 1
+>From 50 to 110: Mission 2

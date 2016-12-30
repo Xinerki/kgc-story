@@ -1,5 +1,7 @@
 <meta>
 	<info type="script" name="A storyline." author="Xinerki" description="For MTA:SA" version="1.0.0" />
+
+	<min_mta_version client="1.5.3" server="1.5.3" />
 	
 	<script type="client" src="global_c.lua" />
 	<script type="server" src="global_s.lua" />
@@ -20,8 +22,12 @@
 	<script type="client" src="missions\marker_display.lua"/>
 
 	<script type="server" src="missions\mission1.lua"/>
+	<script type="server" src="missions\mission2.lua"/>
 
 	<file src="files\kill\small.wav" />
 	<file src="files\kill\big.wav" />
+
+	<file src="files\job\small.wav" />
+	<file src="files\job\big.wav" />
 
 </meta>
