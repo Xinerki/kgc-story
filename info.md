@@ -1,9 +1,9 @@
 TODO:
 - [x] Mission Names
 - [ ] Help Messages
-- [ ] Subtitles
+- [x] Subtitles
 - [x] First mission (Introduction)
-- [ ] A 2-Player mission (requiring a 2nd player to join)
+- [x] A 2-Player mission (requiring a 2nd player to join)
 - [x] Ped tasks
 - [x] A.I.
 
