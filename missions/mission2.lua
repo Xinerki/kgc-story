@@ -113,6 +113,8 @@ end
 
 function mission2.gameplay_1()
 
+destroyElement(mission2.kyle)
+
 mission2.ramp=createObject(1245, -2024, -135, 35, 0, 0, -90)
 setElementDimension(mission2.ramp, mission2.dimension)
 
@@ -170,6 +172,7 @@ mission2.randomrot=math.random(0,360)
 mission2.packer=createVehicle(getVehicleModelFromName("Packer"), -1596+mission2.randomx, 90+mission2.randomy, 4, 0, 0, mission2.randomrot)
 mission2.packerblip=createBlipAttachedTo(mission2.packer, 0, 2, 50,50,255, 255, 0, 99999, mission2.player2)
 mission2.packermarker=createMarker(0,0,0,"arrow", 1.5, 50,50,255,100,mission2.player2)
+attachElements(mission2.packermarker,mission2.packer,0,0,3)
 
 setElementDimension(mission2.packer, mission2.dimension)
 setElementDimension(mission2.packerblip, mission2.dimension)
