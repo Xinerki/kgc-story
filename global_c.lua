@@ -4,6 +4,12 @@ function findRotation( x1, y1, x2, y2 )
     return t < 0 and t + 360 or t
 end
 
+function removeHex (text)
+    if not type(text) == "string" then return false end
+    repeat text = text:gsub("#%x%x%x%x%x%x", "") until not text:find("#%x%x%x%x%x%x")
+    return text
+end
+
 function onRender()
 missionNameT.renderMissionName()
 pedTasksT.update()
