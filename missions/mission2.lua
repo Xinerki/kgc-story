@@ -129,7 +129,7 @@ setElementDimension(mission2.player1car, mission2.dimension)
 setElementPosition(mission2.player1,-1971, 271, 35)
 setElementRotation(mission2.player1, 0, 0, 64, "default", true)
 
-mission2.player2car=createVehicle(getVehicleModelFromName("Stallion"),-1972,259,35,0,0,64)
+mission2.player2car=createVehicle(getVehicleModelFromName("Sabre"),-1972,259,35,0,0,64)
 setElementDimension(mission2.player2car, mission2.dimension)
 setElementPosition(mission2.player2,-1975, 253, 35)
 setElementRotation(mission2.player2, 0, 0, 64, "default", true)
